@@ -30,6 +30,11 @@ RSpec.describe Array do
 
         expect(my_each_results).to eq(each_results)
       end
+
+      it 'does not call the built-in each method' do
+        expect(array).not_to receive(:each)
+        array.my_each { |x| x }
+      end
     end
   end
 end
