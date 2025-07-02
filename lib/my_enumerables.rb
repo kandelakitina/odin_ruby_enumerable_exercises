@@ -1,29 +1,37 @@
 # frozen_string_literal: true
 
 module Enumerable
-  def my_all?(&block)
+  def my_all?
     my_each do |element|
-      return false unless block.call(element)
+      return false unless yield(element)
     end
     true
   end
 
-  def my_any?(&block)
+  def my_any?
     my_each do |element|
-      return true if block.call(element)
+      return true if yield(element)
     end
     false
   end
 
-  def my_count(&block)
+  def my_count
     return size unless block_given?
 
     count = 0
     my_each do |element|
-      count += 1 if block.call(element)
+      count += 1 if yield(element)
     end
 
     count
+  end
+
+  def my_each_with_index
+    index = 0
+    my_each do |item|
+      yield(item, index)
+      index += 1
+    end
   end
 end
 
