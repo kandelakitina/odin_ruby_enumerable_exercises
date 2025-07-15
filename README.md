@@ -12,18 +12,6 @@ This project is created as a learning exercise to understand how Ruby's Enumerab
 - Straightforward and educational code
 - Useful for understanding iteration and internal mechanics of Ruby collections
 
-## Usage
-
-(You can add usage examples here if applicable)
-
-## Contributing
-
-Feel free to fork and submit pull requests if you want to improve or extend this implementation.
-
-## License
-
-(You can add license information here if necessary)
-
 ---
 
 This project is part of Odin's Ruby course curriculum.
